@@ -1,0 +1,14 @@
+#navbar {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+#content {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 20px;
+    flex-wrap: wrap;
+    margin-top: 60px; /* Add margin to move cards lower */
+}

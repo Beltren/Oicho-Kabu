@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Players Page</title>
+    <link rel="stylesheet" href="/css/mobile.css">
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/playerPageScripts.js" defer></script>
+</head>
+<body>
+    <div id="player-list">
+        <% players.forEach(player => { %>
+            <button class="player-button" data-player="<%= player.name %>" data-points="<%= player.points %>"><%= player.name %></button>
+        <% }) %>
+    </div>
+    <div id="player-details">
+        <div id="player-points"></div>
+        <%- include('partials/imageGallery') %>
+        <%- include('partials/combinations', { showMasterCombinations: false }) %>
+    </div>
+</body>
+</html>

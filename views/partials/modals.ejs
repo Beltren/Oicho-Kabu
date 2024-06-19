@@ -1,0 +1,82 @@
+<!-- Players Modal -->
+<div id="players-modal" class="modal">
+    <div id="players-modal-content" class="modal-content">
+        <span id="close-players-modal" class="close">&times;</span>
+        <h2>Players</h2>
+        <table id="players-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Points</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Player rows will be dynamically added here -->
+            </tbody>
+        </table>
+        <button id="add-player-btn">Add Player</button>
+        <div class="flex-container">
+            <label for="master-player-select">Master:</label>
+            <select id="master-player-select">
+                <!-- Options will be populated dynamically -->
+            </select>
+        </div>
+    </div>
+</div>
+
+<!-- Add Player Modal -->
+<div id="add-player-modal" class="modal">
+    <div class="modal-content">
+        <span class="close" id="close-add-player-modal">&times;</span>
+        <h2>Add Player</h2>
+        <input type="text" id="player-name-input" placeholder="Enter player name">
+        <button id="submit-player-btn">Enter</button>
+    </div>
+</div>
+
+
+<div id="rules-modal" class="modal">
+    <div class="modal-content">
+        <span class="close" id="close-rules-modal">&times;</span>
+        <h2>Game Rules</h2>
+        <label for="max-bet-input">Max Bet Size:</label>
+        <input type="number" id="max-bet-input" value="100">
+        <label for="start-points-input">Start Points:</label>
+        <input type="number" id="start-points-input" value="50">
+        <button id="submit-rules-btn">Save Rules</button>
+    </div>
+</div>
+
+<div id="bet-modal" class="modal">
+    <div class="modal-content">
+        <span id="close-bet-modal" class="close">&times;</span>
+        <h2>Place Your Bet</h2>
+        <label for="player-select">Player:</label>
+        <select id="player-select"></select>
+        <label for="bet-points-slider">Bet Points:</label>
+        <input type="range" id="bet-points-slider" min="1">
+        <span id="bet-points-value">1</span>
+        <button id="submit-bet-btn">Submit Bet</button>
+    </div>
+</div>
+
+<!-- Win Multiplier Modal -->
+<div id="win-multiplier-modal" class="modal">
+    <div class="modal-content">
+        <span id="close-win-multiplier-modal" class="close">&times;</span>
+        <h2>Multiply Your Winnings</h2>
+        <button class="multiplier-btn" data-multiplier="2">x2</button>
+        <button class="multiplier-btn" data-multiplier="3">x3</button>
+        <button class="multiplier-btn" data-multiplier="10">x10</button>
+    </div>
+</div>
+
+
+<div id="qr-code-modal" class="modal">
+    <div class="modal-content">
+        <span class="close" id="close-qr-code-modal">&times;</span>
+        <h2>Connect to Mobile</h2>
+        <div id="qr-code"></div>
+    </div>
+</div>
+

@@ -1,0 +1,395 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+#navbar {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+#content {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 20px;
+    flex-wrap: wrap;
+    margin-top: 10px; /* Add margin to move cards lower */
+}
+
+.card {
+    background-color: #444;
+    border: 1px solid #555;
+    border-radius: 8px;
+    width: 200px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.card table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.card th, .card td {
+    border: 1px solid #555;
+    padding: 10px;
+    text-align: left;
+}
+
+.card th {
+    background-color: #555;
+}
+
+.card .bet-btn {
+    width: 100%;
+    margin-top: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 0;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.card .bet-btn:hover {
+    background-color: #0056b3;
+}
+
+.card .win-btn {
+    background-color: #28a745;
+}
+
+.card .win-btn:hover {
+    background-color: #218838;
+}
+
+.card .lose-btn {
+    background-color: #dc3545;
+}
+
+.card .lose-btn:hover {
+    background-color: #c82333;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #333;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: #ffffff;
+}
+
+input, select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-top: 5px;
+    background-color: #444;
+    color: #fff;
+    border: 1px solid #555;
+    border-radius: 4px;
+}
+
+#submit-bet-btn, #submit-rules-btn, #add-player-btn {
+    background-color: #007BFF; /* Blue color for Add and Save buttons */
+    color: white;
+    border: none;
+    padding: 10px 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#submit-bet-btn:hover, #submit-rules-btn:hover, #add-player-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+#players-table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+#players-table th, #players-table td {
+    border: 1px solid #555;
+    padding: 10px;
+    text-align: left;
+}
+
+#players-table th {
+    background-color: #444;
+}
+
+#players-table tr:nth-child(even) {
+    background-color: #222;
+}
+
+/* Style for the slider */
+input[type=range] {
+    -webkit-appearance: none;
+    width: 80%; /* Smaller width */
+    height: 5px; /* Smaller height */
+    background: #555;
+    border-radius: 5px;
+    outline: none;
+    opacity: 0.9;
+    transition: opacity .2s;
+    margin: 10px 0; /* Add margin for spacing */
+}
+input[type=range]:hover {
+    opacity: 1;
+}
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px; /* Smaller thumb size */
+    height: 15px; /* Smaller thumb size */
+    background: #4CAF50;
+    cursor: pointer;
+    border-radius: 50%;
+}
+input[type=range]::-moz-range-thumb {
+    width: 15px; /* Smaller thumb size */
+    height: 15px; /* Smaller thumb size */
+    background: #4CAF50;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.flex-container {
+    display: flex;
+    align-items: center;
+}
+
+#bet-points-value {
+    margin-left: 10px;
+    font-size: 1.2em;
+}
+
+/* Other styles... */
+
+#master-player-select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-top: 5px;
+    background-color: #444;
+    color: #fff;
+    border: 1px solid #555;
+    border-radius: 4px;
+}
+
+/* Navbar */
+#bank {
+    margin-left: 20px;
+    font-size: 1.2em;
+    color: #ffffff;
+}
+
+/* Win Multiplier Modal */
+.modal-content .multiplier-btn {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #007BFF;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.modal-content .multiplier-btn:hover {
+    background-color: #0056b3;
+}
+
+#image-gallery {
+    margin-top: 50px;
+}
+
+.image-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.image-cell {
+    margin: 10px;
+    text-align: center;
+}
+
+.image-cell img {
+    max-width: 200px; /* Double the original maximum width */
+    height: auto;
+}
+
+.image-number {
+    margin-top: 5px;
+    font-size: 1.2em;
+    color: #ffffff;
+}
+
+#combinations {
+    margin-top: 10px; /* Reduce space from top */
+    text-align: center;
+}
+
+.combination-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 10px; /* Reduce space from bottom */
+}
+
+.combination-table-wrapper {
+    width: 40%; /* Set the width of each table wrapper */
+}
+
+.combination-title {
+    margin-bottom: 5px; /* Reduce space from bottom */
+    font-size: 0.8em; /* Reduce font size */
+    color: #ffffff;
+    background-color: #444;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.combination-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #333;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.combination-table th, .combination-table td {
+    border: 1px solid #555;
+    padding: 5px; /* Reduce padding to make the table smaller */
+    text-align: center;
+    font-size: 0.8em; /* Reduce font size */
+    color: #ffffff;
+}
+
+.combination-table th {
+    background-color: #444;
+    font-size: 1em; /* Reduce font size */
+}
+
+.combination-table tr:nth-child(even) {
+    background-color: #222;
+}
+
+.combination-table tr:nth-child(odd) {
+    background-color: #444;
+}
+
+#gaming-cards {
+    margin-top: 10px; /* Reduce space from top */
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #333;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.close {
+    color: #aaa;
+    align-self: flex-end;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#qr-code {
+    margin-top: 20px;
+    width: 256px; /* Increase size of QR code */
+    height: 256px; /* Increase size of QR code */
+}

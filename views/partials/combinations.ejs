@@ -1,0 +1,53 @@
+<div id="combinations">
+    <div class="combination-container">
+        <% if (showMasterCombinations) { %>
+        <div class="combination-table-wrapper">
+            <div class="combination-title">Master Combinations</div>
+            <table class="combination-table">
+                <tr>
+                    <th>Combination</th>
+                    <th>Name</th>
+                    <th>Result</th>
+                </tr>
+                <tr>
+                    <td>4 - 1</td>
+                    <td>Shippin</td>
+                    <td>Win</td>
+                </tr>
+                <tr>
+                    <td>9 - 1</td>
+                    <td>Kuppin</td>
+                    <td>Win</td>
+                </tr>
+            </table>
+        </div>
+        <% } %>
+        <div class="combination-table-wrapper">
+            <% if (showMasterCombinations) { %>
+            <div class="combination-title">Players Combinations</div>
+            <% } %>
+            <table class="combination-table">
+                <tr>
+                    <th>Combination</th>
+                    <th>Name</th>
+                    <th>Result</th>
+                </tr>
+                <tr>
+                    <td>Three of Kind</td>
+                    <td>Arashi</td>
+                    <td>x3</td>
+                </tr>
+                <tr>
+                    <td>10 - 10 - 1</td>
+                    <td>Doshippin</td>
+                    <td>x10</td>
+                </tr>
+                <tr>
+                    <td>8 - 9 - 3</td>
+                    <td>Yakuza</td>
+                    <td>Lose</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
