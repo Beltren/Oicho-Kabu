@@ -1,5 +1,8 @@
 # Oicho-Kabu Web Application
 
+![Kabufuda Deck](https://preview.redd.it/is-this-kabufuda-set-normal-because-it-has-3-kings-6-fives-v0-xmzakmp69m9a1.jpg?width=1080&crop=smart&auto=webp&s=cb95512e466abbcf94ca20b62683d7473db02582)
+
+
 Oicho-Kabu is a traditional Japanese card game played with a deck of Kabufuda cards. This web application allows you to manage and track player points, bets, and game rules. The application includes a user interface for desktop and mobile views, with real-time updates using WebSockets.
 
 ## Features
